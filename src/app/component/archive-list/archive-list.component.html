@@ -1,0 +1,36 @@
+<mat-card class="margin-20">
+
+  <mat-card-title>
+    <div fxLayout="row" *ngIf="Archived">
+      List of Archived ({{Archived.length}})
+    </div>
+  </mat-card-title>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <mat-list>
+      <div *ngFor="let item of Archived">
+        <mat-list-item>
+          <span>
+            <span class="fwb">{{item.title}}</span> - {{item.body}}
+          </span>
+
+          <div fxFlex></div>
+
+          <mat-chip-list>
+            <mat-chip>{{ item.date | date:"dd/MM/yyyy" }}</mat-chip>
+          </mat-chip-list>
+
+          <button mat-icon-button color="primary" matTooltip="Delete" (click)="DeleteArchived(item.$key)">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+      </div>
+    </mat-list>
+  </mat-card-content>
+
+</mat-card>

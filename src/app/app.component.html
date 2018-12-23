@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+
+  <div fxFlex fxLayout="row">
+    <button routerLink="/" mat-icon-button>
+      <mat-icon>home</mat-icon>
+    </button>
+    <div fxFlex></div>
+  </div>
+
+  <span>News App</span>
+
+  <div fxFlex fxLayout="row">
+    <div fxFlex></div>
+
+    <div class="px-5">
+      <button mat-raised-button color="accent" routerLink="/news-list">News</button>
+    </div>
+    <div class="px-5">
+      <button mat-raised-button color="accent" routerLink="/archive-list">Archive</button>
+    </div>
+  </div>
+</mat-toolbar>
+
+
+<!-- Main content -->
+<main role="main">
+  <!-- Use router template to show the components for which router service is activated -->
+  <router-outlet></router-outlet>
+</main>

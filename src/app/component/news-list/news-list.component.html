@@ -1,0 +1,36 @@
+<mat-card class="margin-20">
+
+  <mat-card-title>
+    <div fxLayout="row" *ngIf="News">
+      List of News ({{News.length}})
+    </div>
+  </mat-card-title>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <mat-list>
+      <div *ngFor="let item of News">
+        <mat-list-item>
+          <span>
+            <span class="fwb">{{item.title}}</span> - {{item.body}}
+          </span>
+
+          <div fxFlex></div>
+
+          <mat-chip-list>
+            <mat-chip>{{ item.date | date:"dd/MM/yyyy" }}</mat-chip>
+          </mat-chip-list>
+
+          <button mat-icon-button color="primary" matTooltip="Archive" (click)="ArchiveNew(item.$key)">
+            <mat-icon>archive</mat-icon>
+          </button>
+
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+      </div>
+    </mat-list>
+  </mat-card-content>
+
+</mat-card>

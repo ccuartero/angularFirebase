@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import 'material-icons/iconfont/material-icons.css';
+@import "./assets/css/main.css";
+@import "./assets/css/material-colors.min.css";
+@import "animate.css/animate.css";
+
+.px-5 {
+  padding: 0px 5px;
+}
+
+.line-divider-header {
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+.margin-20 {
+  margin: 20px;
+}
+
+.pa-0 {
+  padding: 0px 0px;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.clickable {
+  cursor: pointer;
+}
